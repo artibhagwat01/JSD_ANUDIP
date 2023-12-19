@@ -1,0 +1,29 @@
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        // Using the first add() method with two int variables
+        int result1 = calculator.add(5, 10);
+        System.out.println("Result of adding two integers: " + result1);
+
+        // Using the second add() method with three int variables
+        int result2 = calculator.add(2, 4, 6);
+        System.out.println("Result of adding three integers: " + result2);
+
+        // Using the third add() method with two double variables
+        double result3 = calculator.add(3.5, 4.5);
+        System.out.println("Result of adding two doubles: " + result3);
+    }
+}

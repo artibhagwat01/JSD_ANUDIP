@@ -1,0 +1,44 @@
+public class Student {
+    private String studentName;
+    private String collegeName;
+    private int studentID;
+
+    // Constructor
+    public Student(String studentName, String collegeName, int studentID) {
+        this.studentName = studentName;
+        this.collegeName = collegeName;
+        this.studentID = studentID;
+    }
+
+    // Getter and setter methods for studentName
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    // Getter and setter methods for collegeName
+    public String getCollegeName() {
+        return collegeName;
+    }
+
+    public void setCollegeName(String collegeName) {
+        this.collegeName = collegeName;
+    }
+
+    // Getter and setter methods for studentID
+    public int getStudentID() {
+        return studentID;
+    }
+
+    public void setStudentID(int studentID) {
+        this.studentID = studentID;
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        System.out.println("Successful");
+    }
+}

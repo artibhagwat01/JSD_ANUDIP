@@ -1,0 +1,46 @@
+interface Account {
+    double getBalance();
+    void deposit(double amount);
+    void withdraw(double amount);
+}
+
+class BankAccount implements Account {
+    private String accountHolderName;
+    private String bankName;
+    private double accountBalance;
+
+    public BankAccount(String accountHolderName, String bankName, double initialBalance) {
+        this.accountHolderName = accountHolderName;
+        this.bankName = bankName;
+        this.accountBalance = initialBalance;
+    }
+
+    public double getBalance() {
+        return accountBalance;
+    }
+
+    public void deposit(double amount) {
+        accountBalance += amount;
+        System.out.println("Deposited " + amount + " into " + accountHolderName + "'s account");
+    }
+
+    public void withdraw(double amount) {
+        if (amount > accountBalance) {
+            System.out.println("Insufficient balance for " + accountHolderName);
+        } else {
+            accountBalance -= amount;
+            System.out.println("Withdrawn " + amount + " from " + accountHolderName + "'s account");
+        }
+    }
+
+    public static void main(String[] args) {
+        BankAccount account1 = new BankAccount("Alice", "ICICI", 1000.0);
+        BankAccount account2 = new BankAccount("Bob", "HDFC", 2000.0);
+        BankAccount account3 = new BankAccount("Charlie", "SBI", 3000.0);
+
+        // Deposit and withdraw for account1
+        account1.deposit(500);
+        account1.withdraw(200);
+
+        // Deposit and withdraw for account2
+        account2.deposit(100

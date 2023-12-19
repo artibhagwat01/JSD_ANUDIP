@@ -1,0 +1,19 @@
+public class Employee {
+    protected int id;
+    protected int age;
+    protected String name;
+    protected boolean isPermanent;
+
+    // Constructor
+    public Employee(int id, int age, String name, boolean isPermanent) {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+        this.isPermanent = isPermanent;
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        System.out.println("Successfully started");
+    }
+}
